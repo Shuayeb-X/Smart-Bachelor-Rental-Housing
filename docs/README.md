@@ -8,6 +8,9 @@ Smart Bachelor Rental Housing is a web-based platform designed to help students 
 The platform connects property owners with renters through a role-based system. To ensure trust and reliability, every property listing submitted by an owner must be reviewed and approved by an administrator before becoming visible on the renter's dashboard.
 
 ---
+![System Architecture Diagram](https://github.com/Shuayeb-X/Smart-Bachelor-Rental-Housing/blob/main/docs/UI.png)
+
+
 
 ## 1. Project Overview
 
@@ -16,6 +19,8 @@ The platform has three main user roles:
 - **Renter:** Searches and views approved rental property listings.
 - **Property Owner:** Submits rental property listings and tracks their approval status.
 - **Admin:** Reviews submitted property listings and approves or rejects them.
+
+![System Architecture Diagram](https://github.com/Shuayeb-X/Smart-Bachelor-Rental-Housing/blob/main/docs/Screenshot_2026-11-24_20-46-13.png)
 
 ### Core Concept
 
@@ -36,7 +41,7 @@ Next.js handles the frontend and backend application logic, while Supabase provi
 
 <!-- Add your System Architecture Image Here -->
 
-![System Architecture Diagram](screenshots/system-architecture.png)
+![System Architecture Diagram](https://github.com/Shuayeb-X/Smart-Bachelor-Rental-Housing/blob/main/docs/system_architecture.png)
 
 
 ## 2. User Roles & Functionalities
@@ -90,6 +95,8 @@ This is the core workflow of the Smart Bachelor Rental Housing platform.
 
 The system follows a five-step process to ensure that every property listing is reviewed before being displayed to renters.
 
+![Owner Property Submission]([screenshots/owner-submit-property.png](https://github.com/Shuayeb-X/Smart-Bachelor-Rental-Housing/blob/main/docs/test-owner.png))
+
 ### Step 01: Owner Submits a Property Listing
 
 The property owner logs in to the owner dashboard and submits a new rental property listing.
@@ -104,7 +111,7 @@ After submission:
 
 <!-- Add your owner submission screenshot here -->
 
-![Owner Property Submission](screenshots/owner-submit-property.png)
+![Owner Property Submission](https://github.com/Shuayeb-X/Smart-Bachelor-Rental-Housing/blob/main/docs/post%20and%20request.png)
 
 ### Step 02: Pending Request Appears in Admin Panel
 
@@ -122,7 +129,7 @@ At this stage, the listing remains in `Pending` status.
 
 <!-- Add your admin pending requests screenshot here -->
 
-![Admin Pending Requests](screenshots/admin-pending-requests.png)
+![Admin Pending Requests](https://github.com/Shuayeb-X/Smart-Bachelor-Rental-Housing/blob/main/docs/pending%20review.png)
 
 ### Step 03: Admin Accepts the Property Request
 
@@ -138,7 +145,7 @@ Once the request is accepted:
 
 <!-- Add your admin approval screenshot here -->
 
-![Admin Approves Property](screenshots/admin-approve-property.png)
+![Admin Approves Property](https://github.com/Shuayeb-X/Smart-Bachelor-Rental-Housing/blob/main/docs/after%20approved%20by%20admin.png)
 
 ### Step 04: Owner Sees Approved Status
 
@@ -150,7 +157,7 @@ The listing status is displayed as `Approved` instead of `Pending`.
 
 <!-- Add your owner approved status screenshot here -->
 
-![Owner Approved Status](screenshots/owner-approved-status.png)
+![Owner Approved Status](https://github.com/Shuayeb-X/Smart-Bachelor-Rental-Housing/blob/main/docs/ownwr%20approved%20dashboard.png)
 
 ### Step 05: Approved Property Appears on Renter Dashboard
 
@@ -164,7 +171,7 @@ Pending or rejected properties are not displayed to renters.
 
 <!-- Add your renter dashboard screenshot here -->
 
-![Renter Approved Properties](screenshots/renter-approved-properties.png)
+![Renter Approved Properties](https://github.com/Shuayeb-X/Smart-Bachelor-Rental-Housing/blob/main/docs/renter%20dashboard.png)
 
 ---
 
@@ -182,41 +189,7 @@ Each property listing follows a status-based approval system.
 
 ## 5. Complete Property Approval Flow
 
-```text
-       Property Owner
-             |
-             v
-      Submit Property
-             |
-             v
-     Save to Supabase
-             |
-             v
-      Status: Pending
-             |
-             v
-       Admin Panel
-             |
-             v
-      Admin Reviews
-             |
-       +-----+-----+
-       |           |
-       v           v
-    Approve      Reject
-       |           |
-       v           v
-    Approved    Rejected
-       |           |
-       v           v
- Owner Dashboard  Hidden
-       |
-       v
- Renter Dashboard
-       |
-       v
- Property Visible
-```
+![Renter Approved Properties](https://github.com/Shuayeb-X/Smart-Bachelor-Rental-Housing/blob/main/docs/workflow%202.png)
 
 ---
 
@@ -291,40 +264,7 @@ The platform aims to:
 
 The following diagram illustrates the complete property submission and approval process.
 
-```text
-             PROPERTY OWNER
-                    |
-                    v
-          Submit Property Listing
-                    |
-                    v
-             SUPABASE DATABASE
-                    |
-                    v
-             Status: PENDING
-                    |
-                    v
-              ADMIN PANEL
-                    |
-                    v
-            Review Property Request
-                    |
-             +------+------+
-             |             |
-             v             v
-          APPROVE        REJECT
-             |             |
-             v             v
-       Status: APPROVED  Status: REJECTED
-             |
-       +-----+------+
-       |            |
-       v            v
- OWNER DASHBOARD  RENTER DASHBOARD
-       |            |
-       v            v
- Sees Approved   Sees Approved
-    Status         Property
+![System Workflow]https://github.com/Shuayeb-X/Smart-Bachelor-Rental-Housing/blob/main/docs/workflow.png)
 ```
 
 ### Workflow Summary

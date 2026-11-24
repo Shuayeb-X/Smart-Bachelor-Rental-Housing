@@ -21,7 +21,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       const supabase = createClient()
       const loadAccount = async (user: { id: string; email?: string; user_metadata?: Record<string, unknown> } | null) => {
         if (!user) {
-          if (active) { setRole(null); setUserName(''); setInitialized(true) }
+          if (active) { setRole(null); setUserName(''); setSigningOut(false); setInitialized(true) }
           return
         }
         const { data: profile } = await supabase.from('profiles').select('role,name').eq('id', user.id).maybeSingle()

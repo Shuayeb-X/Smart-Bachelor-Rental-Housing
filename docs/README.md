@@ -193,94 +193,11 @@ Each property listing follows a status-based approval system.
 
 ---
 
-## 6. Database & Authentication
 
-**Database:** Supabase
-
-Supabase is used to store user information and property listing data.
-
-The platform uses role-based access to distinguish between:
-
-- Renter
-- Property Owner
-- Admin
-
-Property listing information is stored in the database along with its approval status.
-
-The renter dashboard displays only listings with the `Approved` status.
 
 ---
 
-## 7. Key Features
-
-- Role-based authentication and authorization.
-- Separate dashboards for renters, owners, and admins.
-- Property submission by owners.
-- Automatic `Pending` status assignment.
-- Admin-controlled property approval system.
-- Property rejection functionality.
-- Owner-side approval status tracking.
-- Approved property visibility for renters.
-- Supabase database integration.
-
----
-
-## 8. Project Goal
-
-The main goal of Smart Bachelor Rental Housing is to build a trusted bachelor rental marketplace across Bangladesh.
-
-The platform aims to:
-
-- Help students and working professionals find affordable accommodation.
-- Connect renters directly with property owners.
-- Reduce the risk of fake and unverified property listings.
-- Provide a transparent property approval process.
-- Make rental property management easier through a digital platform.
-- Expand nationwide and generate sustainable revenue.
-
----
-
-## 9. Future Improvements
-
-- Location-based property search.
-- Advanced search filters.
-- Property image gallery.
-- Rent and budget filtering.
-- Online booking and reservation.
-- Direct communication between renters and owners.
-- Online payment integration (bKash / Nagad).
-- User reviews and ratings.
-- Email and notification system.
-- Mobile application using Flutter.
-
----
-
-## 10. Project Status
-
-**Current Focus:** Core rental marketplace functionality with role-based dashboards and admin-controlled property listing approval.
-
-
-## 4. Complete System Workflow
-
-The following diagram illustrates the complete property submission and approval process.
-
-![System Workflow]https://github.com/Shuayeb-X/Smart-Bachelor-Rental-Housing/blob/main/docs/workflow.png)
-```
-
-### Workflow Summary
-
-| Step | User / System  | Action                       | Status   |
-| ---- | -------------- | ---------------------------- | -------- |
-| 01   | Property Owner | Submits a property listing   | Pending  |
-| 02   | Supabase       | Saves the listing            | Pending  |
-| 03   | Admin          | Reviews the request          | Pending  |
-| 04   | Admin          | Accepts the request          | Approved |
-| 05   | Owner          | Sees updated approval status | Approved |
-| 06   | Renter         | Views the approved property  | Approved |
-
----
-
-## 5. Main Features
+## 6. Main Features
 
 ### Authentication & Account Management
 
@@ -323,7 +240,7 @@ The following diagram illustrates the complete property submission and approval 
 
 ---
 
-## 6. System Architecture
+## 7. System Architecture
 
 **Architecture Pattern:** Full-Stack Modular Monolithic Architecture
 
@@ -372,7 +289,7 @@ The following diagram illustrates the complete property submission and approval 
 
 ---
 
-## 7. Technology Stack
+## 8. Technology Stack
 
 | Component            | Technology                        |
 | -------------------- | --------------------------------- |
@@ -388,7 +305,7 @@ The following diagram illustrates the complete property submission and approval 
 
 ---
 
-## 8. Database Structure
+## 9. Database Structure
 
 The current system uses two main database tables.
 
@@ -416,7 +333,7 @@ Stores rental property listing information and approval status.
 
 ---
 
-## 9. Role-Based Access Control
+## 10. Role-Based Access Control
 
 The application uses the user's assigned role to determine dashboard access.
 
@@ -430,7 +347,7 @@ Supabase Row Level Security (RLS) is used to enforce database-level access restr
 
 ---
 
-## 10. Deployment
+## 11. Deployment
 
 The application is designed to be deployed using Vercel.
 
@@ -441,7 +358,7 @@ The application is designed to be deployed using Vercel.
 
 ---
 
-## 11. Project Goal
+## 12. Project Goal
 
 The long-term goal of Smart Bachelor Rental Housing is to build a trusted bachelor rental marketplace across Bangladesh.
 
@@ -455,7 +372,7 @@ The platform aims to:
 
 ---
 
-## 12. Project Status
+## 13. Project Status
 
 | Item                      | Details                                                                 |
 | ------------------------- | ----------------------------------------------------------------------- |
